@@ -1,61 +1,77 @@
----
-layout: default
----
-
-<div class="home">
-
-
-  {% for post in paginator.posts%}
-  <div class="post postContent">
-    <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="landing-page">
+        <div class="background-image"></div>
+        <div class="logo-container" id="logo-container">
+            <img src="logo.png" alt="Logo" class="logo-image">
+        </div>
     </div>
-    <div class="postDay">
-      {{post.tag}}
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to continue</p>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="error-message" id="error-message"></div>
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+        </div>
     </div>
-    <br>
-    <div class="postTitle">
-    <!--deleted {{site.url}}{{site.baseurl}} from next line-->
-    <a class='postLink' href="{{post.url}}">{{post.title}}</a>
+
+    <!-- Table View -->
+    <div id="table-view" class="table-view">
+        <div class="table-container">
+            <div class="table-header">
+                <button class="logout-btn" id="logout-btn">Logout</button>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>LinkedIn</th>
+                        <th>Edition</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>Sarah Johnson</td>
+                        <td><a href="https://linkedin.com/in/sarahjohnson" target="_blank">linkedin.com/in/sarahjohnson</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Chen</td>
+                        <td><a href="https://linkedin.com/in/michaelchen" target="_blank">linkedin.com/in/michaelchen</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Rodriguez</td>
+                        <td><a href="https://linkedin.com/in/emilyrodriguez" target="_blank">linkedin.com/in/emilyrodriguez</a></td>
+                        <td>f25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="postExt">
-   <!-- {{ post.content | strip_html | truncatewords:0}} -->
-    </div>
-  </div>
 
-  {% endfor %}
-  {% if paginator.total_pages > 1 %}
-    <nav class="pagination">
-      {% if paginator.previous_page %}
-        <a class="paginationLink" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <em class="paginationLink paginationLinkCurrent">{{ page }}</em>
-      {% elsif page == 1 %}
-        <a class="paginationLink" href="/">{{ page }}</a>
-      {% else %}
-        <a class="paginationLink" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a class="paginationLink" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% endif %}
-    </nav>
-  {% endif %}
-  <!--<ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>-->
-
-
-
-</div>
+    <script src="script.js"></script>
+</body>
+</html>

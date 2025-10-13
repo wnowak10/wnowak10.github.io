@@ -1,9 +1,0 @@
----
-layout: post
-title:  "Zen and the Art of Data Science"
-date:   2016-12-13 19:45:31 +0530
-categories: data_science
-author: "wnowak10"
----
-
-how do we choose our friends? clustering!
