@@ -19,20 +19,15 @@
     <div id="login-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Welcome Back</h2>
-                <p>Sign in to continue</p>
+                <h2>Clip in</h2>
             </div>
             <form id="login-form">
                 <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
+                    <label for="password">Passcode</label>
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="error-message" id="error-message"></div>
-                <button type="submit" class="login-btn">Sign In</button>
+                <button type="submit" class="login-btn">Enter</button>
             </form>
         </div>
     </div>
@@ -40,31 +35,93 @@
     <!-- Table View -->
     <div id="table-view" class="table-view">
         <div class="table-container">
-            <div class="table-header">
-                <button class="logout-btn" id="logout-btn">Logout</button>
-            </div>
             <table class="data-table">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th class="sortable" data-sort="name">Name <span class="sort-icon"></span></th>
                         <th>LinkedIn</th>
-                        <th>Edition</th>
+                        <th class="sortable" data-sort="edition">Edition <span class="sort-icon"></span></th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
                     <tr>
-                        <td>Sarah Johnson</td>
-                        <td><a href="https://linkedin.com/in/sarahjohnson" target="_blank">linkedin.com/in/sarahjohnson</a></td>
+                        <td>Matthew Lloyd Thomas</td>
+                        <td><a href="https://www.linkedin.com/in/matthew-lloyd-thomas-541a9614/" target="_blank">linkedin.com/in/matthew-lloyd-thomas-541a9614/</a></td>
                         <td>f25</td>
                     </tr>
                     <tr>
-                        <td>Michael Chen</td>
-                        <td><a href="https://linkedin.com/in/michaelchen" target="_blank">linkedin.com/in/michaelchen</a></td>
+                        <td>Sam Simpson Dore</td>
+                        <td><a href="https://www.linkedin.com/in/samuel-simpson-dore-59a4b088/" target="_blank">linkedin.com/in/samuel-simpson-dore-59a4b088/</a></td>
                         <td>f25</td>
                     </tr>
                     <tr>
-                        <td>Emily Rodriguez</td>
-                        <td><a href="https://linkedin.com/in/emilyrodriguez" target="_blank">linkedin.com/in/emilyrodriguez</a></td>
+                        <td>Will Nowak</td>
+                        <td><a href="https://www.linkedin.com/in/william-nowak/" target="_blank">linkedin.com/in/william-nowak/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Ryan Denehy</td>
+                        <td><a href="https://www.linkedin.com/in/ryandenehy/" target="_blank">linkedin.com/in/ryandenehy/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Matt Allyn</td>
+                        <td><a href="https://www.linkedin.com/in/matt-allyn/" target="_blank">linkedin.com/in/matt-allyn/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Jeff Rabb</td>
+                        <td><a href="https://www.linkedin.com/in/jefferson-rabb/" target="_blank">linkedin.com/in/jefferson-rabb/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Lebowich</td>
+                        <td><a href="https://www.linkedin.com/in/michael-lebowich-71951b50/" target="_blank">linkedin.com/in/michael-lebowich-71951b50/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Burt Herman</td>
+                        <td><a href="https://www.linkedin.com/in/burtherman/" target="_blank">linkedin.com/in/burtherman/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Robert Novick</td>
+                        <td><a href="https://www.linkedin.com/in/robert-novick-mba/" target="_blank">linkedin.com/in/robert-novick-mba/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Chris Cohen</td>
+                        <td><a href="https://www.linkedin.com/in/chris-cohen-13081467/" target="_blank">linkedin.com/in/chris-cohen-13081467/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Scott Rosenfield</td>
+                        <td><a href="https://www.linkedin.com/in/scott-rosenfield-003a1133/" target="_blank">linkedin.com/in/scott-rosenfield-003a1133/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Scott Vogelman</td>
+                        <td><a href="https://www.linkedin.com/in/scott-vogelmann-987700b/" target="_blank">linkedin.com/in/scott-vogelmann-987700b/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Megha Torpunuri</td>
+                        <td><a href="https://www.linkedin.com/in/mtorpunuri/" target="_blank">linkedin.com/in/mtorpunuri/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Jacqueline Loeb</td>
+                        <td><a href="https://www.linkedin.com/in/jacquelineloeb/" target="_blank">linkedin.com/in/jacquelineloeb/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Gloria Liu</td>
+                        <td><a href="https://www.linkedin.com/in/gloria-liu-b7961313/" target="_blank">linkedin.com/in/gloria-liu-b7961313/</a></td>
+                        <td>f25</td>
+                    </tr>
+                    <tr>
+                        <td>Colin Tanner</td>
+                        <td><a href="https://www.linkedin.com/in/colinatanner/" target="_blank">linkedin.com/in/colinatanner/</a></td>
                         <td>f25</td>
                     </tr>
                 </tbody>
